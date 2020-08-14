@@ -698,3 +698,9 @@ def set_comparison(s1, s2):
 
 def percentage_format(numf):
     return str(round(numf*100, 4))+' %'
+
+def parse_yhaplogroup(s):
+    return re.findall('([A-Z]+?\-[A-Z]+\d+)', s)
+
+def parse_surname(s):
+    return re.findall('(.)氏', s)
